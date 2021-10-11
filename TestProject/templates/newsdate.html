@@ -4,6 +4,14 @@
 
 {% block body %}
 
-<h1>This is our news filtered by date</h1>
+<h1>This is our news for year {{year}}</h1>
+
+{% for article in article_list %}
+<h2>{{article.author}}</h2>
+<h1>{{article.title}}</h1>
+<p>{{article.description}}</p>
+<h4>{{article.pub_date}}</h4>
+
+{% endfor %}
 
 {% endblock %}
