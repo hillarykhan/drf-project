@@ -21,5 +21,9 @@ def NewsP(request):
 
     return render(request, 'news.html', context)
 
+def NewsDate(request):
+
+    return render(request, 'newsdate.html')
+
 def Contact(request):
     return render(request, 'contact.html')
