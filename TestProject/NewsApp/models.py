@@ -6,3 +6,8 @@ class News(models.Model):
     author = models.CharField(max_length=30)
     title = models.CharField(max_length=30)
     description = models.TextField()
+
+class SportNews(models.Model):
+    author = models.CharField(max_length=30)
+    title = models.CharField(max_length=30)
+    description = models.TextField()
