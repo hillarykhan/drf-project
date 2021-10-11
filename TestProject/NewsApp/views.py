@@ -4,7 +4,7 @@ from django.shortcuts import HttpResponse
 # Create your views here.
 
 def Home(request):
-    return HttpResponse("<h1>This is our homepage!</h1>")
+    return render(request, 'home.html')
 
 def News(request):
     return HttpResponse("<h1>This is our latestest news</h1>")
