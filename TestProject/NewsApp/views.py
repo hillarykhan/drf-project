@@ -34,3 +34,8 @@ def NewsDate(request, year):
 
 def Contact(request):
     return render(request, 'contact.html')
+
+
+def Register(request):
+
+    return render(request, 'signup.html')
