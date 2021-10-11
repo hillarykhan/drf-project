@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <title>Home</title>
-</head>
+{% extends 'base.html' %}
 
-<body>
-    <h1> This is Our Home Page</h1>
-    <p>Welcome to our home page!</p>
-</body>
-</html>
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+<h1>This is our news home page</h1>
+<p> This is our latest news!</p>
+
+{% endblock %}
