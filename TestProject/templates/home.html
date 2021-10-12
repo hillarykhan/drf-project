@@ -4,22 +4,16 @@
 
 {% block body %}
 
-<h1>This is our news home page</h1>
-<p> This is our latest news!</p>
+<div class="container">
+    <h1>News Article Home Page</h1>
 
-<h3>My name is {{name}}</h3>
-{{number}}
+    {% for article in articles %}
 
-
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-
-<button type="button" class="btn btn-link">Link</button>
+        <h3>{{article.title}}</h3>
+        <h4>{{article.body}}</h4>
+        <h5>{{article.date}}</h5>
+    
+    {% endfor %}
+</div>
 
 {% endblock %}

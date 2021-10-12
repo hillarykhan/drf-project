@@ -1,14 +1,16 @@
 from django.shortcuts import redirect, render
-from .models import News, RegistrationData
+from .models import Article, News, RegistrationData
 from .forms import RegistrationForm, RegistrationModel
 from django.contrib import messages
 
 # Create your views here.
 
 def Home(request):
+    
+    articles = Article.objects.all()
+
     context = {
-        "name":"Parwiz Forogh",
-        "number":8537812
+        "articles": articles
         
     }
 
