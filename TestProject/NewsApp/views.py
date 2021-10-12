@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from .models import News, RegistrationData
-from .forms import RegistrationForm
+from .forms import RegistrationForm, RegistrationModel
 from django.contrib import messages
 
 # Create your views here.
@@ -59,3 +59,18 @@ def addUser(request):
         myregister.save()
         messages.add_message(request, messages.SUCCESS, "You have successfully signed up!")
     return redirect('register')
+
+def modelForm(request):
+    context = {
+        "modelform":RegistrationForm
+    }
+
+    return render(request, 'modelform.html', context)
+
+def addModelForm(request):
+    mymodelform = RegistrationModel(request.POST)
+
+    if mymodelform.is_valid():
+        mymodelform.save()
+
+    return redirect('form')
